@@ -6,13 +6,15 @@ value_type* lsearch3( value_type* first, value_type *last, value_type target )
 {
 
     //check if the first is less than the last and increase one in first
-        for( ; first < last; ++first){
+        while(first!=last){
             //if the value of first is equal to the target return first address
             if(*first == target)
                 return first;
+
+            ++first;  
         };
 
-    return nullptr; // This is just a STUB. Replace it accordingly.
+    return last; // This is just a STUB. Replace it accordingly.
 }
 
 void print2( value_type *first, value_type *last)
